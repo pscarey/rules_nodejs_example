@@ -1,0 +1,8 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary", "jasmine_node_test")
+
+nodejs_binary(
+    name = "hello",
+    data = [ "hello.js" ],
+    entry_point = "rules_nodejs_example/hello/hello.js",
+    install_source_map_support = False,
+)
